@@ -51,7 +51,7 @@ def chat_click():
 
 
 st.image("./public/dog.png", width=80)
-st.title("ChatBot")
+st.title("Chatgpt-powered ChatBot")
 
 user_input = st.text_input("You:", key="user")
 
@@ -61,11 +61,11 @@ print("demo")
 
 if st.session_state['generated']:
     for i in range(len(st.session_state['generated'])-1, -1, -1):
-        tab1, tab2 = st.tabs(["normal", "rich"])
-        with tab1:
+        tab_normal, tab_rich = st.tabs(["normal", "rich"])
+        with tab_normal:
             message(st.session_state['generated'][i], key=str(i))
-        with tab2:
+        with tab_rich:
             st.markdown(st.session_state['generated'][i])
         message(st.session_state['past'][i],
                 is_user=True, key=str(i) + '_user')
-        
+
