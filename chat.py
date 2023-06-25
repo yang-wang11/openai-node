@@ -51,7 +51,7 @@ def chat_click():
 
 
 st.image("./public/dog.png", width=80)
-st.title("ChatBot powered by CHatgpt")
+st.title("Chatgpt-powered ChatBot")
 
 user_input = st.text_input("You:", key="user")
 
