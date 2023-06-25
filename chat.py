@@ -69,4 +69,3 @@ if st.session_state['generated']:
         message(st.session_state['past'][i],
                 is_user=True, key=str(i) + '_user')
 
-print("done")
