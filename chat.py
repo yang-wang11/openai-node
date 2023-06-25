@@ -57,6 +57,7 @@ user_input = st.text_input("You:", key="user")
 
 chat_button = st.button("Send", on_click=chat_click)
 end_button = st.button("New Chat", on_click=end_click)
+print("demo")
 
 if st.session_state['generated']:
     for i in range(len(st.session_state['generated'])-1, -1, -1):
